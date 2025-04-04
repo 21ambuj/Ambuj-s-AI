@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, request
 import requests
 
 app = Flask(__name__)
@@ -25,7 +25,7 @@ def get_response_from_groq(user_input):
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return ("index.html")
 
 @app.route("/get", methods=["GET"])
 def get_bot_response():
